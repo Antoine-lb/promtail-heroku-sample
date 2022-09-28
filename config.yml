@@ -13,16 +13,16 @@ clients:
 
 scrape_configs:
 # Job name, that will be injected in each log line
- - job_name: ${JOB_NAME}
+- job_name: herokutestlogss
 
 # Apply relabel to keep Heroku internal labels
-relabel_configs:
-- source_labels: ['__heroku_drain_host']
-      target_label: 'host'
-- source_labels: ['__heroku_drain_app']
-      target_label: 'app'
-- source_labels: ['__heroku_drain_proc']
-      target_label: 'proc'
+  relabel_configs:
+  - source_labels: ['__heroku_drain_host']
+    target_label: 'host'
+  - source_labels: ['__heroku_drain_app']
+    target_label: 'app'
+  - source_labels: ['__heroku_drain_proc']
+    target_label: 'proc'
 
 # Main heroku target configuration
   heroku_drain:
@@ -35,4 +35,4 @@ relabel_configs:
       log_level: info
   # Tag each log entry with our job name
     labels: 
-      job: ${JOB_NAME}
+      job: herokutestlogss
