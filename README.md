@@ -7,3 +7,13 @@ Note: in the blog post the `config.yaml` may be a bit hard to copy and paste lea
 ```
  Unable to parse config: /etc/promtail/config.yml: yaml: line 20: did not find expected key
 ```
+
+
+```
+LOKI_TENANT_ID
+LOKI_TOKEN
+LOKI_HOST
+
+JOB_NAME
+PORT # leave default
+```
