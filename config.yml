@@ -20,7 +20,7 @@ scrape_configs:
   - source_labels: ['__heroku_drain_host']
     target_label: 'host'
   - source_labels: ['__heroku_drain_app']
-    target_label: 'app'
+    target_label: 'toto'
   - source_labels: ['__heroku_drain_proc']
     target_label: 'proc'
 
